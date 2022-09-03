@@ -4,7 +4,8 @@ from base64 import urlsafe_b64encode
 
 url = input("URL: ")
 
-with virustotal_python.Virustotal("d3a0d9da531bd921411dd6cd21c1fbe4170373551dc802134737298e0bc6d54e") as vtotal:
+# add key in this line where it says - API KEY HERE
+with virustotal_python.Virustotal("API KEY HERE") as vtotal:
     try:
         resp = vtotal.request("urls", data={"url": url}, method="POST")
         # Safe encode URL in base64 format
